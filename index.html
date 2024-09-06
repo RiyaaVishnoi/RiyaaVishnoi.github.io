@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parakai Springs</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Fredoka+One&family=Baloo&family=Indie+Flower&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!----------------top navigation--------->
+    <header class="top-nav">
+        <div class="logo">
+            <a href="#">Parakai Springs</a>
+        </div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#tours">Tours</a>
+            <a href="./Assets/Storyboard.pdf">StoryBoard</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+        <!----------------top banner--------->
+    <a href="https://www.parakaisprings.co.nz/">
+        <div class="banner" id="main-banner">
+            <div class="sceneContainer">
+                <div class="scene" id="scene1">
+                    <!-- Moved images to their own HTML elements for separate animation from text -->
+                    <img src="./Assets/hotspring1.jpg" />
+                    <h1>Parakai Springs</h1>
+                </div>
+            </div>
+            <div class="sceneContainer">
+                <div class="scene" id="scene2">
+                    <img src="./Assets/hotspring2.jpg" />
+                    <h1>Fast Pass: Your VIP Access Awaits!</h1>
+                </div>
+                <h3 id="studentid">Riya Vishnoi #1550527</h3>
+
+            </div>
+        </div>
+    </a>
+    <!----------------Ticket booking form--------->
+    <div class="form-container">
+        <subtitle class="card-title" style="font-size: large;font-weight: bold;font-style: italic;">Ticket Booking</subtitle>
+        <progress value="10" max="100"></progress>
+        <div id="form-page1" class="form-page" style="display: block;">
+            <div> <!-- page title --> 
+                <h3>Attendance Information</h3>
+            </div>
+            <div> <!-- page input fields --> 
+                <label for="dateAttenance" class="row">
+                    Date of Attendance:
+                    <input type="date" id="attendance-date" style="margin-left: 2px;">
+                </label>
+                <label for="num-Adults" class="row">
+                    Number of Adults:  
+                    <input type="number" id="number-Adults" style="margin-left: 15px;">
+                </label>
+                <label for="num-Child" class="row">
+                    Number of Children:
+                    <input type="number" id="number-Children">
+                </label>
+            </div>
+            <div> <!-- page nav buttons-->
+                <button class="next" type="button" onclick="showPage(2)"> Next Page</button>
+            </div>
+        </div>
+        <div id="form-page2" class="form-page" style="display: none;">
+            <div> <!-- page title --> 
+                <h3>Personal Details</h3>
+            </div>
+            <div> <!-- page input fields --> 
+                <label for="contact-name" class="row">
+                    Contact Name:
+                    <input type="text" id="contactName">
+                </label>
+                <label for="email" class="row">
+                    Email Address:
+                    <input type="email" id="Personal-email">
+                </label>
+            </div>
+            <div> <!-- page nav buttons-->
+                <button class="next" type="button" onclick="showPage(3)"> Next Page</button>
+                <button class="previous" type="button" onclick="showPage(1)"> Previous Page</button>
+            </div>
+        </div>
+        <div id="form-page3" class="form-page" style="display: none;">
+            <div> <!-- page title --> 
+                <h3>Optional Details</h3>
+            </div>
+            <div> <!-- page input fields --> 
+                <label for="ticket-color" class="row">
+                    Ticket Color:
+                    <input type="color" id="ticketcolor">
+                </label>
+                <div> <!-- radio button input --> 
+                    <label for="optional-storage">Optional Storage:</label>
+                    <label for="optional-storage">
+                        <input
+                        type="radio"
+                        id="storage-no"
+                        name="optional"
+                        value="No"
+                        checked="true"
+                        >
+                        No
+                    </label>
+                    <label for="optional-storage">
+                        <input
+                        type="radio"
+                        id="storage-yes"
+                        name="optional"
+                        value="Yes"
+                        > Yes
+                    </label>
+                </div>
+            </div>
+            <div> <!-- page nav buttons-->
+                <button class="previous" type="button" onclick="showPage(2)"> Previous Page</button>
+                <button class="submit" type="button" onclick="showPage(4)">Next Page</button>
+            </div>
+        </div>
+        <!------------------------SUMMARY FORM --------------------------------->
+        <div id="form-page4" class="form-page" style="display: none;">
+            <div> <!-- page title --> 
+                <h3>Booking Summary</h3>
+            </div>
+            <div> <!-- page input fields --> 
+                <div class="row">
+                    Name: <span id="summary-name"></span>
+                </div>
+                <div class="row">
+                    Date of Attendance: <span id="summary-date"></span>
+                </div>
+                <div class="row">
+                    Number of Adults: <span id="summary-adults"></span>
+                </div>
+                <div class="row">
+                    Number of Children: <span id="summary-child"></span>
+                </div>
+                <div class="row">
+                    Email Address: <span id="summary-email"></span>
+                </div>
+                <div class="row">
+                    Optional Storage: <span id="summary-storage"></span>
+                </div>
+                <div class="row">
+                    Ticket Color: <span id="summary-ticketColor"></span>
+                </div>
+            </div>
+            <div> <!-- page nav buttons-->
+                <button class="previous" type="button" onclick="showPage(2)">Previous page</button>
+                <button class="next" type="button" onclick="showPage(6)">Next</button>
+            </div>
+        </div>
+        <!------------------TERMS AND CONDITIONS FORM----------------------------->
+        <div id="form-page6" class="form-page" style="display: none;">
+            <div> <!-- page title --> 
+                <h3>Terms and Conditions</h3>
+            </div>
+            <section>
+                <p><em>Last Updated: [Insert Date]</em></p>
+
+                <h3>1. Modifications to Bookings</h3>
+                <p>If you need to modify your booking, you must contact us directly using the contact details provided on our website. We are not responsible for any errors or omissions in the information submitted that result in issues with your booking.</p>
+            
+                <h3>2. Cancellations and Refunds</h3>
+                <p>Please refer to our cancellation and refund policy, which is provided during the booking process. All cancellations must be made in accordance with this policy.</p>
+            
+                <h3>3. Changes to Terms and Conditions</h3>
+                <p>We reserve the right to update these terms and conditions at any time. Any changes will be posted on this page, and your continued use of our services will constitute acceptance of those changes.</p>
+            
+                <h3>4. Contact Us</h3>
+                <p>If you have any questions regarding these terms and conditions, please contact us at [Insert Contact Details].</p>
+            </section>
+            <div>
+                <input type="checkbox" id="agree" name="agree" required>
+                <label for="agree">I agree to the Terms and Conditions</label>
+            </div>           
+            <div > <!-- page nav buttons-->
+                <button class="next" type="button" onclick="showPage(5)">Submit</button>
+            </div>
+        </div>
+        <div id="form-page5" class="form-page" style="display: none;">
+            <div> <!-- page title --> 
+                <h3>Thank you for your booking!</h3>
+            </div>
+            <div id="ticket"> <!-- Ticket details for printing -->
+                <div id="ticketinfo">
+                <h3>Your Booking Ticket</h3>
+                <p><strong>Name:</strong> <span id="ticket-name"></span></p>
+                <p><strong>Email:</strong> <span id="ticket-email"></span></p>
+                <p><strong>Date:</strong> <span id="ticket-date"></span></p>
+                <p><strong>Number of Adults:</strong> <span id="ticket-adults"></span></p>
+                <p><strong>Number of Children:</strong> <span id="ticket-child"></span></p>
+                <p><strong>Ticket Color:</strong> <span id="ticket-color"></span></p>
+                <p><strong>Storage Option:</strong> <span id="ticket-storage"></span></p>
+            </div>
+            </div>
+            <div > <!-- page nav buttons-->
+                <button class="next" type="button" onclick="printTicket()">Print Ticket</button>
+                <button class="previous" type="button" onclick="showPage(1)">Book Another Ticket</button>
+            </div>
+        </div>
+        
+    </div>
+<!--------------------SIDE BAR ADVERTISMENT------------>
+    <div class="sidebar-ad" id="sidebar-main">
+        <button id="replay-button">Replay</button>
+        <a href=" https://www.greatjourneysnz.com/">
+        <div id="ad-container">
+            <img id="ad-image-1" class="ad-image" src="./Assets/js img1.jpg" alt="Ad Image 1">
+            <img id="ad-image-2" class="ad-image" src="./Assets/www.greatjourneysnz.com (1).jpg" alt="Ad Image 2">
+            <img id="ad-image-3" class="ad-image" src="./Assets/www.greatjourneysnz.com (2).jpg" alt="Ad Image 3">
+            <img id="ad-image-4" class="ad-image" src="./Assets/www.greatjourneysnz.com (3).jpg" alt="Ad Image 4">
+            <div id="ad-text">Explore Today!</div>
+            <div id="ad-text-name">Riya Vishnoi #1550527</div>
+        </div>
+    </a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
