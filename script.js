@@ -113,6 +113,7 @@ function showPage(pageNumber) {
             formPage5.style.display = 'none';
             formPage6.style.display = 'none';
             progressBar.value = 80;
+            updateSummary();
             break;
         case 5:
             formPage1.style.display = 'none';
