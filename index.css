@@ -1,0 +1,44 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f8ff;
+}
+#indexHeader {
+    background-image: url('./Assets/welcome.jpg');
+    background-size: cover; 
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+header h1 {
+    font-size: 4em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+header p {
+    font-size: 1.5em;
+}
+/*Button Styling*/
+.reserve-button {
+    background-color: #00bfff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.reserve-button:hover {
+    background-color: #009acd;
+}
+#indexfooter {
+    text-align: center;
+    padding: 10px;
+    background-color: #005f73;
+    color: white;
+}

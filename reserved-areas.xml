@@ -1,0 +1,64 @@
+<!--This is the XML Storgae File for the areas of Parakai Springs-->
+
+<areas>
+    <area id="1">
+        <capacity>5</capacity>
+        <cost>50</cost>
+        <booked>false</booked>
+        <image>Assets/area1.jpg</image>
+    </area>
+    <area id="2">
+        <capacity>5</capacity>
+        <cost>50</cost>
+        <booked>true</booked>
+        <image>Assets/area2.jpg</image>
+    </area>
+    <area id="3">
+        <capacity>5</capacity>
+        <cost>50</cost>
+        <booked>false</booked>
+        <image>Assets/area3.jpg</image>
+    </area>
+    <area id="4">
+        <capacity>5</capacity>
+        <cost>50</cost>
+        <booked>false</booked>
+        <image>Assets/area4.jpg</image>
+    </area>
+    <area id="5">
+        <capacity>5</capacity>
+        <cost>50</cost>
+        <booked>false</booked>
+        <image>Assets/area5.jpg</image>
+    </area>
+    <area id="6">
+        <capacity>10</capacity>
+        <cost>100</cost>
+        <booked>true</booked>
+        <image>Assets/area6.jpg</image>
+    </area>
+    <area id="7">
+        <capacity>10</capacity>
+        <cost>100</cost>
+        <booked>false</booked>
+        <image>Assets/area7.jpg</image>
+    </area>
+    <area id="8">
+        <capacity>20</capacity>
+        <cost>200</cost>
+        <booked>false</booked>
+        <image>Assets/area8.jpg</image>
+    </area>
+    <area id="9">
+        <capacity>20</capacity>
+        <cost>200</cost>
+        <booked>true</booked>
+        <image>Assets/area9.jpg</image>
+    </area>
+    <area id="10">
+        <capacity>50</capacity>
+        <cost>500</cost>
+        <booked>false</booked>
+        <image>Assets/area10.jpg</image>
+    </area>
+</areas>

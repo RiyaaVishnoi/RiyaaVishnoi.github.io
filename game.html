@@ -1,0 +1,57 @@
+<!--This is the Game Html File that holds the game structure-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Game</title>
+    <link rel="stylesheet" href="game.css"> <!--Seperate stylesheet for game-->
+</head>
+<body>
+    <header class="navbar"> <!--Navigation Panel-->
+        <div class="logo">
+            <h1 class="logo-text">Parakai Springs</h1>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./booking.html">Booking page</a></li>
+                <li><a href="./game.html">Interactive Game</a></li>
+                <li class="dropdown">
+                    <a href="#pdfs" class="dropbtn">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="./Files/wireframe.pdf" target="_blank">Wireframes for Website & Game</a>
+                        <a href="./Files/GameStoryBoard.pdf" target="_blank">Game Storyboard</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+   
+    <!-- Container for Game Content -->
+    <div class="container">
+        <h1>Swimming Pool Game</h1>
+        
+        <!-- Canvas Element -->
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        
+        <!-- Controls -->
+        <div id="controls">
+            <button id="startButton">Start Game</button>
+            <button id="restartButton">Restart Game</button>
+        </div>
+
+        <!-- Score Display -->
+        <div class="score-timer">
+            <div id="score">Score: 0</div>
+            <div id="timer">Timer: 0</div>
+        </div>
+        <!-- Audio Files -->
+        <audio id="success" src="./Assets/achievement-video-game-type-1-230515.mp3"></audio>
+        <audio id="fail" src="./Assets/fail-234710.mp3"></audio>
+        <audio id="background" src="./Assets/game-music-loop-6-144641.mp3" loop></audio>
+        <audio id="end" src="./Assets/game-over-2-sound-effect-230463.mp3"></audio>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

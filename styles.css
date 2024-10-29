@@ -1,0 +1,417 @@
+/*index page styling included inline to avoid clash*/
+/* Basic styling for the map container */
+.map-container {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-image: url('./Assets/parakaiSprings.webp'); 
+    background-size: cover; 
+    margin: 20px auto;
+    border: 2px solid #000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a9d8f; 
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px; 
+    margin-right: 10px;
+}
+
+.logo-text {
+    color: white;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #264653; /* Darker shade for hover */
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e9c46a; 
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f4a261; 
+}
+
+/* Booking Page Styles */
+.booking-page {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.booking-heading {
+    color: #264653; 
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.map {
+    width: 60%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ecf2f3; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card {
+    width: 35%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ecf2f3; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for each reserved area */
+.area {
+    position: absolute;
+    border: 2px dotted rgba(0, 128, 0, 0.8); /* Dotted border for reserved areas */
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Sample positions and sizes for the areas randomly placed */
+#area1 {
+    top: 50px;
+    left: 100px;
+    width: 80px;
+    height: 60px;
+}
+
+#area2 {
+    top: 120px;
+    left: 250px;
+    width: 100px;
+    height: 80px;
+}
+
+#area3 {
+    top: 300px;
+    left: 400px;
+    width: 120px;
+    height: 90px;
+}
+
+#area4 {
+    top: 220px;
+    left: 100px;
+    width: 60px;
+    height: 60px;
+}
+
+#area5 {
+    top: 400px;
+    left: 600px;
+    width: 90px;
+    height: 70px;
+}
+
+#area6 {
+    top: 100px;
+    left: 450px;
+    width: 110px;
+    height: 80px;
+}
+
+#area7 {
+    top: 350px;
+    left: 150px;
+    width: 130px;
+    height: 100px;
+}
+
+#area8 {
+    top: 450px;
+    left: 200px;
+    width: 70px;
+    height: 50px;
+}
+
+#area9 {
+    top: 80px;
+    left: 550px;
+    width: 90px;
+    height: 60px;
+}
+
+#area10 {
+    top: 500px;
+    left: 400px;
+    width: 100px;
+    height: 70px;
+}
+
+
+/* Popup styling */
+.popup {
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup h3 {
+    margin-top: 0;
+}
+
+.popup img {
+    margin-top: 10px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #00bfff;
+    color: white;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.map-section, .booking-summary {
+    margin-top: 30px;
+}
+
+.map-section {
+    text-align: center;
+}
+
+.map-section img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #005f73;
+    color: white;
+    margin-top: 20px;
+    border-radius: 0 0 8px 8px;
+}
+
+/*Styling for booking instructions*/
+h3 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Styling the form inputs and labels in the dates section */
+#dates {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+#dates label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#dates input {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Style for the booking information section */
+#bookingInfo {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#bookingInfo h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+#bookingInfo p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin: 5px 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Modal container */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(124, 220, 234, 0.4); 
+  }
+  
+  /* Modal content */
+  .modal-content {
+    background-color: rgb(235, 240, 243);
+    margin: 15% auto; 
+    padding: 50px;
+    border: none;
+    width: 80%; 
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  #book {
+    text-align: center;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 2;
+  }
+  /* Close button */
+  .close {
+    float: right;
+    background-color: #00bfff;
+    padding: 10px 15px;
+    font-size: 15px;
+    color: white;
+    margin-right: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #0693c3;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+/* Search Button*/
+#searchbtn {
+    background-color: #00bfff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+#searchbtn:hover {
+    background-color: #009acd;
+}

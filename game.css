@@ -1,0 +1,159 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; 
+    color: #00796b; 
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    height: 100vh;
+    flex-direction: column;
+    padding-top: 70px; /* Space for fixed navbar height */
+}
+/* Container Styles */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9); 
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+/* Canvas Styles */
+#gameCanvas {
+    border: 2px solid #00796b; 
+    border-radius: 10px;
+    background-color: #fff; 
+    background-image: url('./Assets/waterbg.jpg'); 
+    display: block;
+    margin: 20px auto;
+}
+
+/* Control Button Styles */
+#controls {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00796b; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #b2dfdb; 
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #004d40; 
+}
+
+/* Score and Timer Display Styles */
+.score-timer {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a9d8f; 
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    top: 0; /* Fixes navbar at the top */
+    left: 0;
+    z-index: 10; /* Ensures it appears above other elements */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px; 
+    margin-right: 10px;
+}
+
+.logo-text {
+    color: white;
+    font-size: 24px; 
+}
+
+/* Navigation Links */
+.nav-links ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #264653; 
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative; /* Necessary for dropdown positioning */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e9c46a; 
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f4a261; 
+}
+
+/* Additional styling for score and timer */
+#score, #timer {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #2a9d8f; 
+}
