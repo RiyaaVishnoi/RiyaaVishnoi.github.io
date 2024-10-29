@@ -14,7 +14,7 @@ const failSound = document.getElementById("fail");
 const successSound = document.getElementById("success");
 const gameOverSound = document.getElementById("end");
 const characterSpriteSheet = new Image();
-characterSpriteSheet.src = "./assets/swim.png";
+characterSpriteSheet.src = "Assets/swim.png";
 characterSpriteSheet.onload = loadAssets;
 
 backgroundImage = new Image();
