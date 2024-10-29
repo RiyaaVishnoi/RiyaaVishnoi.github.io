@@ -18,7 +18,7 @@ characterSpriteSheet.src = "./assets/swim.png";
 characterSpriteSheet.onload = loadAssets;
 
 backgroundImage = new Image();
-backgroundImage.src = "./assets/waterbg.jpg";
+backgroundImage.src = "Assets/waterbg.jpg";
 backgroundImage.onload = loadAssets;
 
 const totalAssets = 2;
