@@ -56,7 +56,7 @@ function initializeGame() {
                     [0, 96], [56, 96], [112, 96]
                 ]
             ],
-            1 // Scale factor
+            2 // Scale factor
         );
 
         // Set the character's initial position to the center of the canvas
